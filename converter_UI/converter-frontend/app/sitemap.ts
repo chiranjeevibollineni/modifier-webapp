@@ -1,8 +1,9 @@
 import { MetadataRoute } from 'next';
 import { conversionToolsIndex } from './data/tools';
 
-// Force Next.js to render this sitemap statically during the build process
+// Force static rendering structures across compile runtime layers
 export const dynamic = 'force-static';
+export const revalidate = false; // ◄ ADD THIS DEFINITIVE LINE HERE
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseDomain = "https://modifier.online";
