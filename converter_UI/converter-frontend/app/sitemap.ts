@@ -1,8 +1,11 @@
 import { MetadataRoute } from 'next';
 import { conversionToolsIndex } from './data/tools';
 
+// Force Next.js to render this sitemap statically during the build process
+export const dynamic = 'force-static';
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseDomain = "https://peoplepulse.online";
+  const baseDomain = "https://modifier.online";
 
   // 1. Establish the main landing page route path coordinate
   const foundationalIndexRoute = [
